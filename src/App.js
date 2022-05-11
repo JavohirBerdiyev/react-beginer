@@ -1,17 +1,21 @@
+import React, { Component } from 'react';
 import "./App.css";
-import Books from "./components/Book/Book";
-import Person from "./components/Person/Person";
+import Expenses from './components/Expenses/Expenses';
+import expenses from './expenses';
+// rcfc
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {}
+  }
 
-function App() {
-  return (
-    <div>
-      <h1 className="App">Hello React</h1>
-      <Person name="Aziz" age="20"> Assalomu alaykum </Person>
-      <Person name="Husan" age="18" />
-      <Books />
-     </div>
-  );
+  render() {
+    return (
+      <div className='App'>
+        <Expenses items={expenses} />
+      </div>
+    );
+  }
+
 }
-
-
 export default App;
